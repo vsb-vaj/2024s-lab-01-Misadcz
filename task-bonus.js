@@ -7,9 +7,10 @@
 // * * * * *
 
 // Your code:
-const drawTriangle = (length = 5) => {
-  
-    // ... write code ...
+export const drawTriangle = (length = 5) => {
+    for(let i = 0; i < length; i++) {
+    console.log("*");
+    }
 };
 
 // 2#  ========== BONUS =======================
@@ -27,8 +28,24 @@ const drawTriangle = (length = 5) => {
 // J A V A S C R I P T
 
 // Your code:
-const drawJavascriptWord = (word = "javascript") => {
-  // ... write code ...
+ const drawJavascriptWord = (word = "javascript") => {
+   length = word.length;
+   
+
+  for(let i = length; i >= 0; i--) {
+    line = ''
+    linex = ''
+    for(let j = 0; j < i; j++) {
+      line += '*'
+  }
+  for(let j = 0; j < length - i; j++) {
+    linex += word[length-j-1];
+  }
+  linex = linex.split('').reverse().join('');
+
+  final = line + linex;
+  console.log(final)
+  }
 };
 
 
@@ -47,6 +64,6 @@ const drawJavascriptWord = (word = "javascript") => {
 //   ];
 
 // Your code:
-const getVehiclesAndTopSpeed = (vehicles) => {
+export const getVehiclesAndTopSpeed = (vehicles) => {
   
 };
